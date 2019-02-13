@@ -7,15 +7,17 @@ img = loadImage('assets/test.png');
 //noCorsor();
 }
 function draw() {
-  background(200)
+  background(255)
   image(img, width/2, height/2);
   if(mouseX>width/2-img.width/2 && mouseX<width/2+img.width/2 &&
    mouseY>height/2-img.height/2 && mouseY<height/2+img.height/2)
    {
-  filter(GRAY);
+  filter(POSTERIZE, 3);
+
+
   }
   else {
-    filter(BLUR, 255);
+    filter(POSTERIZE, 255);
   }
 
 
